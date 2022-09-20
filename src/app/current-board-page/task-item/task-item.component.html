@@ -1,0 +1,10 @@
+<app-window-overlay (closeEvent)="changeWindowState()" *ngIf="detailedWindowState"></app-window-overlay>
+
+ <!-- <app-window-overlay></app-window-overlay> -->
+
+<div class="task-item" (click)="changeWindowState()" cdkDrag>
+  <div class="drop-placeholder" *cdkDragPlaceholder>
+    {{taskName}}
+  </div>
+  <p>{{taskName}}</p>
+</div>

@@ -1,0 +1,81 @@
+$header-height: 65px;
+$text-color: #293856;
+
+
+
+.hero {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(237, 234, 255, 1), rgba(255, 255, 255, 1));
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 30px;
+    margin: 0 0 10px 0;
+    background: white;
+    height: $header-height;
+    transition: .7s;
+
+    &:hover {
+      box-shadow:0 2px  15px rgba(0, 0, 0, .2);
+    }
+
+  }
+
+
+
+  .logo {
+    display: flex;
+    align-items: center;
+    color: $text-color;
+    font-size: 30px;
+  }
+
+  .nav-links {
+      list-style: none;
+      height: $header-height;
+      display: flex;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $header-height;
+        cursor: pointer;
+
+        a {
+          display: block;
+          height: 100%;
+          width: 100%;
+          font-size: larger;
+          color: $text-color;
+          text-decoration: none;
+          text-align: center;
+          padding: 20px;
+        }
+
+        .link {
+          height: $header-height;
+          width: 120px;
+        }
+
+        .active {
+          color: whitesmoke;
+          background-color: #0065FF;
+        }
+
+      }
+  }
+}
+
+
+

@@ -1,0 +1,24 @@
+<div class="board-column">
+  <div class="column-title">
+    <h3>{{columnName}}</h3>
+    <p>Some icon</p>
+  </div>
+    <div class="drop-list"
+      cdkDropList
+      [cdkDropListData]="tasks"
+      (cdkDropListDropped)="drop($event)">
+      <div class="empty-block"></div>
+      <app-task-item *ngFor="let task of tasks" [taskName]="task"></app-task-item>
+      <ng-template appFormHost></ng-template>
+    </div>
+  <div class="add-section" *ngIf="showState">
+    <button class="add-btn" (click)="createForm()">
+      <div class="plus alt"></div>
+      Add a card
+    </button>
+  </div>
+</div>
+
+
+
+

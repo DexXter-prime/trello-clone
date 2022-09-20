@@ -1,0 +1,132 @@
+.board-column {
+
+  width: 290px;
+  background: #EBECF0;
+  padding: 10px;
+  border-radius: 3px;
+  color: #3E4F6B;
+
+  .column-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px;
+
+  }
+
+
+
+  .drop-list {
+
+    padding: 1px;
+
+    max-height: 580px;
+    overflow-x: hidden ;
+    overflow-y: auto;
+
+    .empty-block {
+      width: 100%;
+      border: 1px solid #EBECF0;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 7px;
+      border-radius: 10px;
+      height: 530px;
+    }
+
+
+    &::-webkit-scrollbar-track {
+      background-color: darkgrey;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+      margin-left: 10px;
+      border-radius: 10px;
+    }
+
+  }
+
+  .add-section {
+    width: 100%;
+    // padding: 10px;
+
+    button {
+      padding: 0 100px 0 0;
+      width: 100%;
+      background: none;
+      border: none;
+      border-radius: 3px;
+      color: #949CAC;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+
+      // ADD ICON
+      .plus {
+        display:inline-block;
+        width:30px;
+        height:30px;
+        margin: 0 0 3px 0;
+        background:
+          linear-gradient(#fff,#fff),
+          linear-gradient(#fff,#fff),
+          #949CAC;
+        background-position:center;
+        background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
+        background-repeat:no-repeat;
+      }
+
+      .alt {
+        background:
+          linear-gradient(#949CAC,#949CAC),
+          linear-gradient(#949CAC,#949CAC);
+        background-position:center;
+        background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
+        background-repeat:no-repeat;
+
+      }
+
+      // END OF ICON
+
+      &:hover {
+        color:#44546F;
+        background: #DADBE2;
+
+        // ADD ICON
+        .plus {
+          display:inline-block;
+          width:30px;
+          height:30px;
+          margin: 0 0 3px 0;
+          background:
+            linear-gradient(#fff,#fff),
+            linear-gradient(#fff,#fff),
+            #44546F;
+          background-position:center;
+          background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
+          background-repeat:no-repeat;
+        }
+
+        .alt {
+          background:
+            linear-gradient(#44546F,#44546F),
+            linear-gradient(#44546F,#44546F);
+          background-position:center;
+          background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
+          background-repeat:no-repeat;
+
+        }
+        // END OF ICON
+
+      }
+
+    }
+
+  }
+
+}

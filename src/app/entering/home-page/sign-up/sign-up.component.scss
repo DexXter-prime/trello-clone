@@ -1,0 +1,133 @@
+
+$text-color: #293856;
+$width-inp-btn: 350px;
+$btn-height: 37px;
+$err-msg-color: red;
+
+
+
+.register-wrapper {
+  width: 450px;
+  padding: 25px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+    h3 {
+      font-size: 45px;
+      color: $text-color;
+    }
+  }
+
+  &, form, .form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .form-wrapper {
+    background: white;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+
+    .text {
+      margin: 15px;
+      color: #5E6C84;
+      font-weight: bold;
+    }
+
+    form {
+
+      input {
+        width: $width-inp-btn;
+        margin: 10px;
+        padding: 12px 8px;
+        background: #FAFBFC;
+        border-radius: 3px;
+        border: 2px solid #E6E7EB;
+        font-size: small;
+        outline: red;
+        transition: .3s;
+
+        &::placeholder {
+          opacity: .7;
+        }
+        &:focus {
+          outline: none;
+          border: 2px solid #5A9EF8;
+        }
+
+
+      }
+
+      .err-msg {
+        color: $err-msg-color;
+        span {
+          font-size: 12px;
+        }
+      }
+
+      button {
+        width: $width-inp-btn;
+        height: $btn-height;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        background: #5AAC44;
+        font-weight: bold;
+        margin: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background: #61BD4F;
+        }
+      }
+    }
+
+    .or {
+      font-weight: 200;
+      font-size: smaller;
+      margin: 20px;
+    }
+
+    .google-auth {
+      width: $width-inp-btn;
+
+      button {
+        width: 100%;
+        border: none;
+        background-color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .2),  0 -1px 3px rgba(0, 0, 0, .2);
+        font-weight: bold;
+        color: #57657E;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $btn-height;
+        line-height: 10px;
+
+        &:hover {
+          background: #F9FAFC;
+        }
+
+        img {
+          height: 23px;
+          margin: 5px;
+        }
+      }
+    }
+  }
+
+
+
+}

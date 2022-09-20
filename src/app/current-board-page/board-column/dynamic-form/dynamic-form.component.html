@@ -1,0 +1,18 @@
+
+<form [formGroup]="taskCardform" (keyup.esc)="onClose()" (keyup.enter)="onSubmit()" (ngSubmit)="onSubmit()">
+  <textarea type="text" placeholder="Enter your text..."  appAutoFocus formControlName="text-area"></textarea>
+  <div class="btns-section">
+    <button class="add-btn" type="submit">Add a card</button>
+    <button class="close-btn" type="button" (click)="onClose()">Close</button>
+  </div>
+</form>
+
+<app-error-message
+*ngIf="taskCardform.get('text-area')?.errors?.maxlength"
+(closeEvent)="onClose()"
+[requiredLen]="taskCardform.get('text-area')?.errors?.maxlength.requiredLength"
+[actualLen]="taskCardform.get('text-area')?.errors?.maxlength.actualLength"
+></app-error-message>
+
+
+

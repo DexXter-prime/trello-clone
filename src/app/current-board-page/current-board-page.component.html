@@ -1,0 +1,15 @@
+<div class="root">
+  <div class="navbar">
+    <app-board-navbar></app-board-navbar>
+  </div>
+  <div class="board">
+      <!-- Здесь как будто должны быть фильтры -->
+      <div class="board-columns" cdkDropListGroup>
+        <!-- Здесь начинаются колонки -->
+
+        <app-board-column *ngFor="let column of board.columns"
+         [columnName]="column.title" [tasks]="column.tasks"
+          >
+        </app-board-column>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.task-item {
+  padding: 7px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  margin: 8px 0;
+  word-wrap: break-word;
+  color: #44546F;
+  font-size: smaller;
+
+  cursor: pointer;
+
+  &:hover {
+    background: #F0F0F0;
+  }
+}
+
+
+.drop-placeholder {
+  color: #C7C7C7;
+  font-size: smaller;
+  word-wrap: break-word;
+  padding: 7px;
+  margin: 8px 0;
+  background: #C7C7C7;
+  border: none;
+  border-radius: 3px;
+  min-height: 30px;
+}

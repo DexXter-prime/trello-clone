@@ -1,0 +1,22 @@
+<section class="main-wrapper">
+  <div class="own-workspace">
+    <div class="board-info">
+
+      <h2>Your Workspaces</h2>
+      <h3>Amount of Boards: 3</h3>
+    </div>
+    <div class="card-wrapper">
+      <app-board-item *ngFor="let item of items" [title]="item.title" [boardId]="item.id">
+      </app-board-item>
+    </div>
+  </div>
+  <div class="guest-workspace">
+    <div class="board-info">
+      <h2>Guest Workspaces</h2>
+      <h3>Amount of Boards: 7</h3>
+    </div>
+    <div class="card-wrapper">
+      <app-board-item *ngFor="let item of items" [title]="item.title" [boardId]="item.id"></app-board-item>
+    </div>
+  </div>
+</section>

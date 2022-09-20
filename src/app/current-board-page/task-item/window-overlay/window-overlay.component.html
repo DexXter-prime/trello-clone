@@ -1,0 +1,175 @@
+<div class="backdrop" (click)="onClose()">
+</div>
+
+<div class="detailed-window">
+  <div class="modal-wrapper">
+
+    <div class="header-modal">
+      <div class="text-and-title">
+        <h3>Some text here</h3>
+        <p>in list *Table where it is placed*</p>
+      </div>
+      <button (click)="onClose()">
+        <div class="f-line"></div>
+        <div class="s-line"></div>
+      </button>
+    </div>
+
+    <div class="description-modal">
+      <div class="description-header">
+        <h3>Description</h3>
+        <button *ngIf="!!descriptionValue" (click)="showForm()">Edit</button>
+      </div>
+      <p *ngIf="!!descriptionValue; else formBlock" (click)="showForm()">
+        {{descriptionValue}}
+      </p>
+
+          <ng-template #formBlock>
+            <form [formGroup]="descriptionForm">
+              <textarea placeholder="Add a description..."
+              #descriptionElement
+              (focusout)="makeInactive()"
+              (focus)="makeActive()"
+              [ngClass]=" formState ? 'active' : 'non-active' "
+              appTextareaAutoresize
+              appAutoFocus
+              formControlName="description-area"
+              ></textarea>
+
+              <div class="btn-section" *ngIf="formState">
+                <button class="save-btn" (click)="makeInactive()">Save</button>
+            </div>
+            </form>
+          </ng-template>
+
+    </div>
+
+    <div class="history-modal" [ngClass]="formState ? 'small' : 'big' ">
+      <div class="history-note">
+        <div class="action-block">
+          <h4>Santodiego Garsia</h4>
+          <p> added this card to Testing</p>
+        </div>
+        <div class="date">
+          <p>15 Sep</p>
+        </div>
+        <br>
+      </div>
+      <div class="history-note">
+        <div class="action-block">
+          <h4>Santodiego Garsia</h4>
+          <p> added this card to Testing</p>
+        </div>
+        <div class="date">
+          <p>15 Sep</p>
+        </div>
+        <br>
+      </div>
+
+      <div class="history-note">
+        <div class="action-block">
+          <h4>Santodiego Garsia</h4>
+          <p> added this card to Testing</p>
+        </div>
+        <div class="date">
+          <p>15 Sep</p>
+        </div>
+        <br>
+      </div>
+
+      <div class="history-note">
+        <div class="action-block">
+          <h4>Santodiego Garsia</h4>
+          <p> added this card to Testing</p>
+        </div>
+        <div class="date">
+          <p>15 Sep</p>
+        </div>
+        <br>
+      </div>
+      <div class="history-note">
+        <div class="action-block">
+          <h4>Santodiego Garsia</h4>
+          <p> added this card to Testing</p>
+        </div>
+        <div class="date">
+          <p>15 Sep</p>
+        </div>
+        <br>
+      </div>
+
+      <div class="history-note">
+        <div class="action-block">
+          <h4>Santodiego Garsia</h4>
+          <p> added this card to Testing</p>
+        </div>
+        <div class="date">
+          <p>15 Sep</p>
+        </div>
+        <br>
+      </div>
+
+
+      <div class="history-note">
+        <div class="action-block">
+          <h4>Santodiego Garsia</h4>
+          <p> added this card to Testing</p>
+        </div>
+        <div class="date">
+          <p>15 Sep</p>
+        </div>
+        <br>
+      </div>
+
+      <div class="history-note">
+        <div class="action-block">
+          <h4>Santodiego Garsia</h4>
+          <p> added this card to Testing</p>
+        </div>
+        <div class="date">
+          <p>15 Sep</p>
+        </div>
+        <br>
+      </div>
+
+
+      <div class="history-note">
+        <div class="action-block">
+          <h4>Santodiego Garsia</h4>
+          <p> added this card to Testing</p>
+        </div>
+        <div class="date">
+          <p>15 Sep</p>
+        </div>
+        <br>
+      </div>
+
+
+      <div class="history-note">
+        <div class="action-block">
+          <h4>Santodiego Garsia</h4>
+          <p> added this card to Testing</p>
+        </div>
+        <div class="date">
+          <p>15 Sep</p>
+        </div>
+        <br>
+      </div>
+
+
+      <div class="history-note">
+        <div class="action-block">
+          <h4>Santodiego Garsia</h4>
+          <p> added this card to Testing</p>
+        </div>
+        <div class="date">
+          <p>15 Sep</p>
+        </div>
+        <br>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+

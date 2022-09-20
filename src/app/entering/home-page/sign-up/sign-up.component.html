@@ -1,0 +1,79 @@
+<div class="register-wrapper">
+  <div class="logo">
+    <img [src]="imgPath">
+    <h3>Trello-clone</h3>
+  </div>
+
+  <div class="form-wrapper">
+    <div class="text">
+      <p>Sign Up to Trello</p>
+    </div>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+
+      <input type="text" placeholder="Enter name" formControlName='name'>
+      <div class="err-msg" *ngIf="signUpForm.get('name')!.touched && signUpForm.get('name')!.invalid
+       || (signUpForm.get('name')!.untouched  && submittedForm)">
+        <span *ngIf="signUpForm.get('name')!.errors?.required ">Field has to be filled</span>
+      </div>
+
+      <input type="email" placeholder="Enter email" formControlName="email">
+      <div class="err-msg" *ngIf="signUpForm.get('email')!.touched && signUpForm.get('email')!.invalid
+      || (signUpForm.get('email')!.untouched  && submittedForm)">
+        <span *ngIf="signUpForm.get('email')!.errors?.required ">Field has to be filled</span>
+        <span *ngIf="signUpForm.get('email')!.errors?.email">It has to be like EMAIL</span>
+      </div>
+
+      <input type="password" placeholder="Enter password" formControlName="password">
+      <div class="err-msg" *ngIf="signUpForm.get('password')!.touched && signUpForm.get('password')!.invalid
+      || (signUpForm.get('password')!.untouched  && submittedForm)">
+
+        <span *ngIf="signUpForm.get('password')!.errors?.required ">Field has to be filled</span>
+
+        <span *ngIf="signUpForm.get('password')!.errors?.minlength">
+          Minimum length is
+          {{ signUpForm.get('password')!.errors?.minlength.requiredLength}}, your is
+          {{ signUpForm.get('password')!.errors?.minlength.actualLength}}
+        </span>
+
+        <span *ngIf="signUpForm.get('password')!.errors?.maxlength">
+          Maximum length is
+          {{ signUpForm.get('password')!.errors?.maxlength.requiredLength}}, your is
+          {{ signUpForm.get('password')!.errors?.maxlength.actualLength}}
+        </span>
+
+      </div>
+
+      <input type="password" placeholder="Confirm password" formControlName="confirm-password">
+      <div class="err-msg" *ngIf="signUpForm.get('confirm-password')?.touched && signUpForm.get('confirm-password')?.invalid
+       || (signUpForm.get('confirm-password')?.untouched && submittedForm)">
+
+        <span *ngIf="signUpForm.get('confirm-password')?.errors?.required ">Field has to be filled</span>
+
+        <span *ngIf="signUpForm.get('confirm-password')?.errors?.minlength">
+          Minimum length is
+          {{ signUpForm.get('confirm-password')?.errors?.minlength.requiredLength}}, your is
+          {{ signUpForm.get('confirm-password')?.errors?.minlength.actualLength}}
+        </span>
+
+        <span *ngIf="signUpForm.get('confirm-password')?.errors?.maxlength">
+          Maximum length is
+          {{ signUpForm.get('confirm-password')?.errors?.maxlength.requiredLength}}, your is
+          {{ signUpForm.get('confirm-password')?.errors?.maxlength.actualLength}}
+        </span>
+      </div>
+
+      <div class="err-msg" *ngIf="resultOfConfirmation">
+        <span>Passwords doesn't match</span>
+      </div>
+
+      <button type="submit">Register</button>
+
+    </form>
+    <div class="or">
+      <p>OR</p>
+    </div>
+    <div class="google-auth">
+      <button><img [src]="googleImg">Register with Google</button>
+    </div>
+  </div>
+</div>

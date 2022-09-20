@@ -1,0 +1,60 @@
+.error-msg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 10px;
+  padding: 15px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 3px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+
+
+  button {
+
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: 120px;
+    &:hover {
+      .f-line, .s-line {
+        background: black;
+      }
+    }
+
+    .f-line, .s-line {
+
+      position: relative;
+      right: 3px;
+      bottom: 5px;
+      margin-top: 10px;
+      width: 2px;
+      height: 18px;
+      background: grey;
+      border-radius: 3px;
+      transition: .4s;
+
+    }
+
+    .f-line {
+
+      left: 1px;
+      transform: rotate(45deg);
+    }
+
+    .s-line {
+      right: 1px;
+      transform: rotate(-45deg);
+    }
+
+
+  }
+
+}
